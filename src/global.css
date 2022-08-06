@@ -1,0 +1,37 @@
+:root{
+  --white: #ffffff;
+  --dark: #000000;
+  --grey: #707070;
+  --lightGrey: #E7E7E7;
+  --blue: #24E6E6;
+  --darkGrey: #43424B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+html {
+  /* this is just to 1rem be 10px instead 16px */
+  font-size: 62.5%; 
+}
+html, body{
+  height: 100%;
+}
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--white);
+  color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+}
+*{
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 700;
+}
+button {
+  cursor: pointer;
+}
