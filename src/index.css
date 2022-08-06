@@ -6,7 +6,7 @@ body{
   display: flex;
   height: 100%;
 }
-.sidebar-wrapper{
+.sidebar-wrapper, .sidebar-wrapper-mobile{
   padding:25px;
   display:flex;
   flex-direction: column;
@@ -14,15 +14,16 @@ body{
   border-right: 1px solid var(--white);
   
 }
-.sidebar-wrapper  h1 {
-  font-family: 'Poppins';
-  font-style: normal;
+.sidebar-wrapper  h1, .sidebar-wrapper-mobile h1{
   font-weight: 700;
   font-size: 48px;
   line-height: 72px;
   text-align: center;
 
   color: #FFFFFF;
+}
+.sidebar-wrapper-mobile{
+  display: none;
 }
 .sidebar-wrapper-icons {
   display: flex;
@@ -51,7 +52,6 @@ body{
   /* width: 50%; */
 }
 .body-content nav a{
-  font-family: 'Poppins';
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
@@ -72,11 +72,9 @@ body{
   display: flex;
   padding: 0 126px 0;
   position: relative
-
 }
+
 .wrapper-banner h1 {
-  font-family: 'Poppins';
-  font-style: normal;
   font-weight: 700;
   font-size: 72px;
   line-height: 79px;
@@ -84,8 +82,6 @@ body{
   color: var(--white)
 }
 .wrapper-banner h2 {
-  font-family: 'Poppins';
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -127,12 +123,9 @@ footer section:last-child{
 }
 footer section{
   position: relative;
-
 }
 
 footer section h1{
-  font-family: 'Poppins';
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
@@ -140,8 +133,6 @@ footer section h1{
   margin: 40px 0 18px;
 }
 footer section h2{
-  font-family: 'Poppins';
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 31px;
@@ -151,8 +142,94 @@ footer section h2{
 
 footer section:nth-of-type(1)> img { 
   width: 50px;
-  /* opacity: 0.5; */
   position: absolute;
   bottom:0;
   right: -50px;
+}
+
+/* @media only screen and (max-width: 576px) {  */
+@media only screen and (max-width: 768px) { 
+  .sidebar-wrapper{
+    display: none;
+  }
+  
+  .body-wrapper{
+    flex-direction: column;
+  }
+  .sidebar-wrapper-mobile{
+    display: flex;
+    flex-direction: row;
+  }
+  .body-content nav{
+    display: none;
+  }
+  .wrapper-banner{
+    display: flex;
+    padding: 0 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .wrapper-banner img {
+    width: 130%;
+    margin: 0;
+    /* display: none; */
+    z-index: -1;
+    right: -55%;
+    overflow: hidden;
+  }
+  .wrapper-banner h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    margin-top: 135px;
+    color: var(--white)
+  }
+  .wrapper-banner h2 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .wrapper-banner section {
+    width: 65%;
+    margin: 0 0 60px 25px;
+    margin: 40px 0 100px 25px;
+  }
+  footer{
+    position: relative;
+    /* display: none; */
+    overflow: scroll; 
+    scrollbar-width: none;
+  }
+  footer::-webkit-scrollbar{
+    display: none;
+  }
+  footer img{
+    max-height: 100%;
+    width: 60%;
+    margin-left: 25px;
+  }
+  footer section h1{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  footer section h2{
+    font-size: 12px;
+    line-height: 165%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+            line-clamp: 4; 
+    -webkit-box-orient: vertical;
+  }
+  footer section:nth-of-type(1)> img { 
+    width: 50px;
+    position: absolute;
+    bottom:0;
+    right: 0px;
+  }
+  footer section:last-child{
+    margin-left: 30px;
+  }
 }
